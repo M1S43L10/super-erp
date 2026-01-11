@@ -1,0 +1,102 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+develop-eggs/
+downloads/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+
+# =========================
+# Entornos virtuales
+# =========================
+venv/
+env/
+.venv/
+.ENV/
+
+# =========================
+# Archivos de entorno
+# =========================
+.env
+.env.*
+*.env
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+errores.txt
+
+# =========================
+# Bases de datos locales
+# =========================
+*.db
+*.sqlite
+*.sqlite3
+
+# =========================
+# Archivos temporales
+# =========================
+*.tmp
+*.bak
+*.swp
+*.old
+
+# =========================
+# Configuración IDE
+# =========================
+.vscode/
+.idea/
+*.iml
+
+# =========================
+# Windows
+# =========================
+Thumbs.db
+desktop.ini
+
+# =========================
+# Ejecutables y builds
+# =========================
+*.exe
+*.msi
+*.spec
+*.zip
+*.rar
+
+# =========================
+# Node (si usás API)
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+# Ngrok
+# =========================
+ngrok.yml
+
+# =========================
+# Archivos sensibles
+# =========================
+*.key
+*.pem
+*.pfx
+certs/
+tokens/

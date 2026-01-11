@@ -1,0 +1,14 @@
+{
+  "name": "super-erp",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:api-local": "npm run dev --workspace=apps/api-local",
+    "dev:api-central": "npm run dev --workspace=apps/api-central",
+    "dev:web": "npm run dev --workspace=apps/web"
+  }
+}

@@ -1,0 +1,47 @@
+/* =========================
+   INFO HARD – LIGHT (ERP)
+   ========================= */
+:root {
+  /* Marca */
+  --primary: #0f9d58;
+  --primary-hover: #0b7a43;
+  --accent: #2ecc71;
+
+  /* Fondos */
+  --bg: #f5f7f6;
+  --surface: #ffffff;
+  --surface-alt: #eef2f1;
+
+  /* Texto */
+  --text-primary: #1f2933;
+  --text-secondary: #6b7280;
+
+  /* UI */
+  --border: #e5e7eb;
+
+  /* Estados */
+  --success: #16a34a;
+  --warning: #f59e0b;
+  --error: #dc2626;
+}
+
+/* =========================
+   INFO HARD – DARK (POS)
+   ========================= */
+[data-theme="dark"] {
+  --primary: #22c55e;
+  --primary-hover: #16a34a;
+
+  --bg: #0b1220;
+  --surface: #111827;
+  --surface-alt: #0f172a;
+
+  --text-primary: #e5e7eb;
+  --text-secondary: #9ca3af;
+
+  --border: #1f2937;
+
+  --success: #22c55e;
+  --warning: #fbbf24;
+  --error: #ef4444;
+}

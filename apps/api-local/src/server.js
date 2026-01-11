@@ -12,6 +12,7 @@ import productosRoutes from "./modules/productos/productos.routes.js";
 import stockRoutes from "./modules/stock/stock.routes.js";
 import cajerosRoutes from "./modules/cajeros/cajeros.routes.js";
 import authRoutes from "./modules/auth/auth.routes.js";
+import dashboardRoutes from "./modules/dashboard/dashboard.routes.js";
 
 
 
@@ -23,6 +24,7 @@ app.use("/api/pos", posRoutes);
 app.use("/api/productos", productosRoutes);
 app.use("/api/stock", stockRoutes);
 app.use("/api/cajeros", cajerosRoutes);
+app.use("/api/dashboard", dashboardRoutes);
 
 
 app.get("/api/health", async (_req, res) => {

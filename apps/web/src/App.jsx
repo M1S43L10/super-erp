@@ -10,6 +10,9 @@ import Pos from "./pages/Pos.jsx";
 import LoginCajero from "./pages/LoginCajero.jsx";
 import RequireCajero from "./components/RequireCajero.jsx";
 
+import Login from "./pages/Login.jsx";
+import RequireERP from "./components/RequireERP.jsx";
+
 function RedirectIfLogged({ children }) {
   const token = localStorage.getItem("pos_token");
   if (token) return <Navigate to="/pos" replace />;
@@ -29,9 +32,8 @@ export default function App() {
             </RedirectIfLogged>
           }
         />
-
         <Route
-          path="/pos"
+          path="/pos/*"
           element={
             <RequireCajero>
               <Pos />
@@ -39,11 +41,17 @@ export default function App() {
           }
         />
 
-        {/* (opcional) si después querés subrutas tipo /pos/ventas */}
-        {/* <Route path="/pos/*" element={<RequireCajero><Pos /></RequireCajero>} /> */}
+        {/* ===== ERP LOGIN ===== */}
+        <Route path="/login" element={<Login />} />
 
-        {/* ===== ERP (CON BARRA / LAYOUT) ===== */}
-        <Route element={<AppLayout />}>
+        {/* ===== ERP (CON BARRA / LAYOUT) PROTEGIDO ===== */}
+        <Route
+          element={
+            <RequireERP>
+              <AppLayout />
+            </RequireERP>
+          }
+        >
           <Route path="/" element={<Dashboard />} />
           <Route path="/caja" element={<Caja />} />
           <Route path="/productos" element={<Productos />} />

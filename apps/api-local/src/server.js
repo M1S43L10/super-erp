@@ -6,16 +6,19 @@ import cors from "cors";
 import { ensureDatabaseAndRole } from "./db/bootstrap.js";
 import { pool } from "./db/pool.js";
 import { runMigrations } from "./db/migrate.js";
+import { seedAdmin } from "./db/seedAdmin.js";
 import posRoutes from "./modules/pos/pos.routes.js";
 import productosRoutes from "./modules/productos/productos.routes.js";
 import stockRoutes from "./modules/stock/stock.routes.js";
 import cajerosRoutes from "./modules/cajeros/cajeros.routes.js";
+import authRoutes from "./modules/auth/auth.routes.js";
 
 
 
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.use("/api/auth", authRoutes);
 app.use("/api/pos", posRoutes);
 app.use("/api/productos", productosRoutes);
 app.use("/api/stock", stockRoutes);
@@ -37,6 +40,7 @@ const PORT = process.env.PORT || 3001;
 async function start() {
   await ensureDatabaseAndRole();
   await runMigrations();
+  await seedAdmin();
 
   app.listen(PORT, () =>
     console.log(`API LOCAL escuchando en puerto ${PORT}`)
